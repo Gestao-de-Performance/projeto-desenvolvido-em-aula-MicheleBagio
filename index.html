@@ -1,28 +1,86 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Escola de programadores</title>
-    </head>
-    <body>
-        <header>
-            <h1>Escola de programadores</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Habilidades</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-                
-            </nav>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!--define que o site tem todos os caracteres da tabela ask-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--faz o site ficar adaptavel a qualquer tela, responsivo-->
 
-        </header>
-        <main>
-            <h2>Michele</h2>
-            <p>Trabalha como gerente de loja</p>
-            <img width= "254px" heigt="277.266px" src="/img/MAGO.webp" alt="O mago 
-            que esta usando um robe roxo e segurando um cajado, o cajado esta brilhando
-            a ponta que esta virado para cima">
-        </main>
-    </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- link da fonte que sera usada, a informação foi pega do site google fonts -->
+    <title>Document</title> <!--nome que aparece na aba em cima da barra de pesquisa-->
+</head>
+<style>
+    *{ /*configuraçao de todo o site*/        
+        margin: 0;
+        padding: 0;
+        font-family: Montserrat , sans-serif; /*se a fonte montserrat não funcionar outra font sera usada*/
+    }
+
+    :root{  /*define as cores que serao usadas no site*/
+        --roxo-200: #8E35FF;
+        --roxo-300: #5A13b4; /*foi criada uma variavel com valor de cada cor para facilitar o uso depois*/
+        --roxo-400: #3b1270;
+    }
+
+    a{ /*todas as tags 'a' terão essa configuração inicial */
+        color: var(--roxo-300);
+        font-size: 0.875rem; /*tamanho da fonte*/
+        text-decoration: none; /* perguntar*/
+    }
+
+    h1,h2,p{
+        color: var(--roxo-400);
+    }
+
+    .menuNavegacao{  /*o que cada um desses nomes faz*/
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .inputHeader{ /* o ponto é usado quando se esta estilizando uma classe */
+        border: none;
+        color: var(--roxo-300);
+    }
+
+    .inputHeader:focus{
+        outline: none; /*usado para remover uma linha de contorno que tinha dentro do campo de busca*/
+    }
+
+    .inputHeader::placeholder{ /* como o placeholder descrito no html é um caractere "especial" no caso ele é um campo de busca, se usa os dois pontos para poder estilizao a palavra */
+        color: var(--roxo-300);
+    }
+
+    .campoPesquisa{
+        display: flex;
+        align-items: center; /*alinhar no centro*/
+        justify-content: center; /*alinha itens na horizontal no caso aqui no centro*/
+        border: 1px solid var(--roxo-300); /*especificação da borda, solida e na cor roxa*/
+        opacity: 0.40; /*cria a opacidade no que esta escrito dentro da tag*/
+        padding: 0.1875rem 0.8125rem; /*define o preenchimento ou borda dentro da cx da tabela */
+    }
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menuNavegacao"> <!-- class criada para fazer a poder personalizar essa ul do site-->
+                <li><a href="#"><img src="img/logo.png"></a></li> <!--href cria um destino, no caso esta com # pq ainda não tem destino-->
+                <li><a href="#">Graduação</a></li> <!-- 'a' tag de link, 'li' tag de lista-->
+                <li><a href="#">Blog</a></li>
+                <li class="campoPesquisa"><input class="inputHeader" placeholder="Buscar"><a href="#"><img src="img/lupa.svg"></a></li>
+               <!--'placeholder' usado quandoo texto fica dentro de um formulário-->
+                <li><a href="#"><img src="img/cadeado.svg">Ambiente Virtual</a></li>
+
+                <!--as classes campoPesquisa, inputHeader,foram criadas para ficar melhor de formatar o designer dessa parte-->
+            </ul>
+        </nav>
+    </header>
+
+</body>
 </html>
