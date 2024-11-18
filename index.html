@@ -9,62 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- link da fonte que sera usada, a informação foi pega do site google fonts -->
     <title>Document</title> <!--nome que aparece na aba em cima da barra de pesquisa-->
+
+    <link rel="stylesheet" href="style.css"> <!--indica que o estilo da pagina vai estar na pasta style.css-->
 </head>
-<style>
-    *{ /*configuraçao de todo o site*/        
-        margin: 0;
-        padding: 0;
-        font-family: Montserrat , sans-serif; /*se a fonte montserrat não funcionar outra font sera usada*/
-    }
 
-    :root{  /*define as cores que serao usadas no site*/
-        --roxo-200: #8E35FF;
-        --roxo-300: #5A13b4; /*foi criada uma variavel com valor de cada cor para facilitar o uso depois*/
-        --roxo-400: #3b1270;
-    }
-
-    a{ /*todas as tags 'a' terão essa configuração inicial */
-        color: var(--roxo-300);
-        font-size: 0.875rem; /*tamanho da fonte*/
-        text-decoration: none; /* perguntar*/
-    }
-
-    h1,h2,p{
-        color: var(--roxo-400);
-    }
-
-    .menuNavegacao{  /*o que cada um desses nomes faz*/
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .inputHeader{ /* o ponto é usado quando se esta estilizando uma classe */
-        border: none;
-        color: var(--roxo-300);
-    }
-
-    .inputHeader:focus{
-        outline: none; /*usado para remover uma linha de contorno que tinha dentro do campo de busca*/
-    }
-
-    .inputHeader::placeholder{ /* como o placeholder descrito no html é um caractere "especial" no caso ele é um campo de busca, se usa os dois pontos para poder estilizao a palavra */
-        color: var(--roxo-300);
-    }
-
-    .campoPesquisa{
-        display: flex;
-        align-items: center; /*alinhar no centro*/
-        justify-content: center; /*alinha itens na horizontal no caso aqui no centro*/
-        border: 1px solid var(--roxo-300); /*especificação da borda, solida e na cor roxa*/
-        opacity: 0.40; /*cria a opacidade no que esta escrito dentro da tag*/
-        padding: 0.1875rem 0.8125rem; /*define o preenchimento ou borda dentro da cx da tabela */
-    }
-
-</style>
 
 <body>
     <header>
@@ -73,14 +21,118 @@
                 <li><a href="#"><img src="img/logo.png"></a></li> <!--href cria um destino, no caso esta com # pq ainda não tem destino-->
                 <li><a href="#">Graduação</a></li> <!-- 'a' tag de link, 'li' tag de lista-->
                 <li><a href="#">Blog</a></li>
-                <li class="campoPesquisa"><input class="inputHeader" placeholder="Buscar"><a href="#"><img src="img/lupa.svg"></a></li>
+                <li class="campoPesquisa"><input class="inputHeader" placeholder="Buscar"><a href="#"><img src="img/lupa.svg" alt="lupa"></a></li>
                <!--'placeholder' usado quandoo texto fica dentro de um formulário-->
-                <li><a href="#"><img src="img/cadeado.svg">Ambiente Virtual</a></li>
-
+                <li><a href="#"><img width="11px" height="14px" src="img/cadeado.svg" alt="cadeado">Ambiente Virtual</a></li>
+                <!--tem que colocar o tamanho da imagem-->
                 <!--as classes campoPesquisa, inputHeader,foram criadas para ficar melhor de formatar o designer dessa parte-->
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="tamanhoSecao">
+            <h1>Nós somos uma <b>faculdade digital</b></h1>
+            <div class="posicaoSubTitulo">
+                <span class="subTitulo">Você, preparado para <b>o futuro.</b></span>
+                <!--tag b negrito-->
+                <img class="animacaoSeta" wdith="35px" height="200px" src="img/seta-amarela.png" alt="Seta amarela apontando para baixo">
+                <div class="tamanhoTexto">
+                    <span>Se preparar para o mercado é uma coisa, prosperar nele é outra.<b>Noss graduação te ajuda com as duas.</b></span>
+                </div>
+            </div>
+        </section>
+        <section style="background-color: #3B1270;">
+            <div class="tamanhoSecao">
+                <div class="displayCarrossel">
+                    <img class="posicaoPersonagem" src="img/personagem.jpg">
+                    <div class="preenchimentoCursos">
+                        <h2 class="letraBranca tamanhoTituloCarreira">Escolha sua Carreira</h2>
+                        <div class="containerNomeCursos">
+                            <span class="letraBranca">Graduação</span>
+                            <span class="letraBranca">Análise e Desenvolvimento de Sistemas</span>
+                            <div class="containerBotoes">
+                                <img src="img/seta-esquerda.svg">
+                                <img src="img/seta-direita.svg">
+                            </div>
+                        </div>
+                        <span class="letraBranca tamanhoTituloSoftSkills">Soft Skills que você vai desenvolver: </span>
+                        <div class="containerSoftSkills">
+                            <div class="containerSkills">
+                                <div>
+                                    <span class="letraBranca textoSkills">Criatividade</span>
+                                    <div class="containerNivelSkills">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="letraBranca textoSkills">Liderança</span>
+                                    <div class="containerNivelSkills">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-vazia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-vazia.png">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="letraBranca textoSkills">Gerenciamento de Tempo</span>
+                                    <div class="containerNivelSkills">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-vazia.png">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="containerSkills">
+                                <div>
+                                    <span class="letraBranca textoSkills">Inovação</span>
+                                    <div class="containerNivelSkills">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="letraBranca textoSkills">Comunicação</span>
+                                    <div class="containerNivelSkills">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-vazia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-vazia.png">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="letraBranca textoSkills">Habilidade Interpessoal</span>
+                                    <div class="containerNivelSkills">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-cheia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-vazia.png">
+                                        <img class="tamanhoEstrela" src="img/estrela-vazia.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 </html>

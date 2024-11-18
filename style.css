@@ -1,0 +1,176 @@
+*{ /*configuraçao de todo o site*/
+    margin: 0;
+    padding: 0;
+
+    font-family: "Montserrat", sans-serif; /*se a fonte montserrat não funcionar outra font sera usada*/
+}
+
+:root{ /*define as cores que serao usadas no site,salvo na raiz do trabalho, root local das variaveis*/
+    --roxo-200: #8E35FF;
+    --roxo-300: #5A13B4;  /*foi criada uma variavel com valor de cada cor para facilitar o uso depois*/
+    --roxo-400: #3B1270; 
+    
+    --branco-300: #ffffff;
+}
+
+a{ /*todas as tags 'a' terão essa configuração inicial */
+    color: var(--roxo-300);
+    font-size: 0.875rem; /*tamanho da fonte*/
+    text-decoration: none;
+}
+
+h1, h2, p, span{
+    color: var(--roxo-400);
+}
+
+h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+header{
+    margin: 2% 15%;
+}
+
+.tamanhoSecao{  /* o ponto é usado quando se esta estilizando uma classe */
+        margin: 4% 15%;
+}
+/*Cabeçalho*/
+.menuNavegacao{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputHeader, .inputHeader::placeholder, .inputHeader:focus{  /*quando clica no objeto se usa o focus*/
+ /* como o placeholder descrito no html é um caractere "especial" no caso ele é um campo de busca, se usa os dois pontos para poder estilizao a palavra */
+    border: none;
+    outline:none; /*usado para remover uma linha de contorno que tinha dentro do campo de busca*/
+    color: var(--roxo-300);
+}
+
+.campoPesquisa{
+    display: flex;
+    align-items: center; /*alinhar no centro*/
+    justify-content: center; /*alinha itens na horizontal no caso aqui no centro*/
+    border: 1px solid var(--roxo-300); /*especificação da borda, solida e na cor roxa*/
+    opacity: 0.40; /*cria a opacidade no que esta escrito dentro da tag*/
+    padding: 0.1875rem 0.8125rem; /*define o preenchimento ou borda dentro da cx da tabela */
+}
+/*Fim Cabeçalho*/
+
+/*Título*/
+.subTitulo {
+    font-size: 6.5rem;
+    max-width: 65%;
+    font-weight: 300;
+}
+
+.posicaoSubTitulo{
+    display: flex;
+    align-items: flex-end;
+    gap: 8%;
+}
+
+.tamanhoTexto{
+    max-width: 14%;
+}
+
+.animacaoSeta{
+    position: relative;
+    animation: movimentoSeta 2s ease-in-out infinite;
+}
+
+@keyframes movimentoSeta{
+    0%{ /*movimento seta*/
+        top: -40px;
+    }
+
+    50%{
+        top: 0;
+    }
+
+    100%{
+        top: -40px;
+    }
+}
+/*Sim Título*/
+
+
+/*Carrossel de Cursos*/
+.displayCarrossel{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.posicaoPersonagem{
+    position: relative;
+    top: -50px;
+}
+
+.preenchimentoCursos{
+    padding: 3% 0;
+}
+
+.tamanhoTituloCarreira{
+    font-size: 2rem;
+}
+
+.letraBranca{
+    color: var(--branco-300);
+}
+
+.tamanhoTituloSoftSkills{
+    font-size: 1.4rem;
+}
+
+.containerNomeCursos{
+    display: flex;
+    padding: 3%;
+    width: 100%;
+    gap: 40px;
+    background-color: #ffffff5c;
+    margin: 5% 0 10%;
+}
+
+.containerBotoes{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.containerSoftSkills{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    gap: 5%;
+    width: 105%;
+}
+
+.containerSkills{    
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.textoSkills{
+    opacity: 0.7;
+    font-size: 1.3rem;
+}
+
+.containerNivelSkills{
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.tamanhoEstrela{
+    scale: 1.5;
+}
