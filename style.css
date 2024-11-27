@@ -6,6 +6,7 @@
 }
 
 :root{ /*define as cores que serao usadas no site,salvo na raiz do trabalho, root local das variaveis*/
+    --roxo-100: #ded0f173;
     --roxo-200: #8E35FF;
     --roxo-300: #5A13B4;  /*foi criada uma variavel com valor de cada cor para facilitar o uso depois*/
     --roxo-400: #3B1270; 
@@ -36,6 +37,8 @@ header{
 .tamanhoSecao{  /* o ponto é usado quando se esta estilizando uma classe */
         margin: 4% 15%;
 }
+
+
 /*Cabeçalho*/
 .menuNavegacao{
     list-style-type: none;
@@ -73,7 +76,7 @@ header{
 
 .posicaoSubTitulo{
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end; /*todos os itens na parte inferior*/
     gap: 8%;
 }
 
@@ -105,8 +108,8 @@ header{
 /*Carrossel de Cursos*/
 .displayCarrossel{
     display: flex;
-    align-items: flex-start;
-    flex-direction: row;
+    align-items: flex-start; /*itens alinhados na parte superior do container*/
+    flex-direction: row; /*organiza na horizontal*/
     gap: 5%;
 }
 
@@ -148,7 +151,7 @@ header{
 
 .containerSoftSkills{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*item 1 fica no inicio, ultimo item fica no final e o resto é dividido no espaço que sobra*/
     margin-top: 5%;
     gap: 5%;
     width: 105%;
@@ -156,7 +159,7 @@ header{
 
 .containerSkills{    
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /*organiza os itens em uma coluna vertical*/
     gap: 40px;
 }
 
@@ -167,10 +170,72 @@ header{
 
 .containerNivelSkills{
     display: flex;
-    align-items: flex-end;
-    gap: 15px;
+    align-items: flex-end; /*Alinha todos os itens na parte inferior do container */
+    gap: 15px; /*cria espaço entre os elementos*/
 }
 
 .tamanhoEstrela{
     scale: 1.5;
+}
+
+.botaoInscrever{
+    background-color: var(--roxo-200); /*cor de fundo do botao*/
+    color: var(--branco-300); /*cor da letra*/
+    width: 85%; /*define a largura do botao em 85% do elemento principal*/
+    display: flex; /*permite que se faça alterações no botão , align e justify so podem ser usados por causa do display flex*/
+    align-items: center; /*alinha as coisas verticalmente no centro*/
+    justify-content: center; /*alinha horizontalmente no centro*/
+    font-size: 2rem; /*tamanho da fonte*/
+    padding: 2% 0; /*adiciona espaço interno, longe das bordas*/
+    position: relative; /*usado junto com top, para definir a posição do botao*/
+    top: 30px;/*define a posição do botao*/
+}
+
+/*Fim Carrossel de Cursos*/
+
+
+
+/*rodape*/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ded0f173;
+}
+
+/*Blog*/
+
+.containerPostBlog{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3%
+}
+
+.corTexto{
+    color: var(--dourado-300);
+}
+
+.containerBotao{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    max-width: 340px;
+    transition: transform 0.5s, box-shadow 0.5s;
+    margin: 13,2px;
+}
+
+.containerBotao:hover{ /*usado uando tem interação entre o sistema e o usuario*/
+    transform: scale(1.1); /*efeito do botao aumentar quando passa o mouse*/
+    box-shadow: 0 5px 15px rgba(59, 18, 112, 0.2); /*cria uma sombra em volta do elemento, 3 primeiros numeros direção da sombra rgba é a cor da sombra, e o 0.2 no final é a opacidade*/
+}
+
+.containerTituloPost{
+    padding: 4%;
+}
+
+.containerInformacoesPost{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
 }
